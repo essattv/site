@@ -1,1 +1,246 @@
-<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"><title>Cennik VIP – CS-Maliver.pl</title><style>body{margin:0;padding:10px;background:#121212;color:#E0E0E0;font:15px/1.5 Arial,sans-serif;text-align:center}h1{color:#0f0;margin:12px 0 8px;font-size:20px}.container{width:100%;background:#1E1E1E;padding:20px;border-radius:6px;box-shadow:0 0 8px rgba(0,255,0,0.4);box-sizing:border-box}table{border-collapse:collapse;width:100%;max-width:400px;margin:0 auto}th,td{padding:6px;border:1px solid #333}th{background:#1E1E1E;color:#0f0}td{background:#121212} .link{display:block;margin-top:12px;color:#0f0;text-decoration:none;font-weight:bold}.footer{margin-top:15px;font-size:13px;color:#aaa}@media(max-width:800px){body{font-size:13px}th,td{padding:4px}}</style></head><body><div class="container"><h1>Cennik VIP</h1><table><tr><th>Okres</th><th>SMS</th><th>Przelew</th></tr><tr><td>1 dzień</td><td>1.23 PLN</td><td>xxx</td></tr><tr><td>3 dni</td><td>2.46 PLN</td><td>xxx</td></tr><tr><td>7 dni</td><td>4.92 PLN</td><td>3.20 PLN</td></tr><tr><td>14 dni</td><td>6.15 PLN</td><td>4.20 PLN</td></tr><tr><td>30 dni</td><td>11.07 PLN</td><td>6.60 PLN</td></tr><tr><td>60 dni</td><td>17.22 PLN</td><td>8.10 PLN</td></tr><tr><td>90 dni</td><td>23.37 PLN</td><td>10.20 PLN</td></tr></table><a href="vip.html" class="link">« Powrót do opisu VIP</a><div class="footer">Więcej na stronie: <b>www.CS-Maliver.pl</b></div></div></body></html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sylwester na Rydla 2025/2026</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff00c8, #00f5ff);
+      color: #fff;
+      text-shadow: 0 0 20px #ff00c8, 0 0 25px #00f5ff;
+      border-bottom: 5px solid #111;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      animation: flicker 2s infinite alternate;
+    }
+
+    header h2 {
+      font-size: 1.8rem;
+      margin-top: 15px;
+    }
+
+    @keyframes flicker {
+      from { opacity: 1; }
+      to { opacity: 0.8; text-shadow: 0 0 30px #ff00c8, 0 0 50px #00f5ff; }
+    }
+
+    /* Sekcja z opisem – tło */
+    .content {
+      position: relative;
+      padding: 80px 20px;
+      min-height: 100vh;
+      background: url('https://api.kopalnia.pl/storage/2022/36/1920px_kopalnia-soli-wieliczka-kopalnia-wiedzy-potancowka-3-700-465-13-07-2022.jpeg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .content::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .content p, .buy-box {
+      position: relative;
+      z-index: 1;
+    }
+
+    .content p {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      margin: 20px 0;
+      max-width: 800px;
+    }
+
+    .buy-box {
+      margin-top: 40px;
+      padding: 30px;
+      background: rgba(20, 20, 20, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 0 25px #ff00c8, 0 0 35px #00f5ff;
+      max-width: 90%;
+    }
+
+    .buy-box h3 {
+      margin: 0 0 20px;
+      font-size: 2rem;
+      color: #00f5ff;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #ff00c8, #00f5ff);
+      border: none;
+      padding: 16px 35px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px #ff00c8, 0 0 25px #00f5ff;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px #ff00c8, 0 0 60px #00f5ff;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      background: #111;
+      margin: 25% auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 420px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 0 25px #ff00c8, 0 0 40px #00f5ff;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #fff;
+    }
+
+    /* RESPONSYWNOŚĆ */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header h2 {
+        font-size: 1.4rem;
+      }
+
+      .content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .buy-box h3 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 40px 10px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header h2 {
+        font-size: 1.2rem;
+      }
+
+      .content {
+        padding: 40px 15px;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .buy-box {
+        padding: 20px;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sylwester na Rydla</h1>
+    <h2>2025 / 2026</h2>
+  </header>
+
+  <section class="content">
+    <p>🎉 Gdzie? ul. Rydla – tam, gdzie dobra zabawa miesza się z lekkim chaosem.</p>
+    <p>📅 Kiedy? 31 grudnia, start o 19:00, koniec… jak się skończy.</p>
+    <p>🐇 Dlaczego? Bo jak nie teraz, to kiedy? Króliki uczą się układu tanecznego, a pies szykuje outfit!</p>
+
+    <div class="buy-box">
+      <h3>Bilet: 50 zł (albo flaszka)</h3>
+      <button class="btn" id="buyBtn">Kup teraz</button>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="ticketModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Kup bilet</h2>
+      <p>Zadzwoń lub napisz SMS na numer:</p>
+      <h3 style="color:#00f5ff;">📱 723-129-228</h3>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("ticketModal");
+    const btn = document.getElementById("buyBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
